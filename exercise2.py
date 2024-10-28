@@ -13,18 +13,13 @@ class Point2D:
     @property
     def y(self) -> float:
         return self._coordinates[1]
-    
-    def __iadd__(self, other: Vector) -> "Point2D":
+
+    def __iadd__(self, other: Vector) -> None:
         self._coordinates += other
         return self
-
-    def __isub__(self, other: Vector) -> "Point2D":
+    def __isub__(self, other: Vector) -> None:
         self._coordinates -= other
         return self
-
-    #def __iadd__(self, other: Vector) -> None:
-    #    self._coordinates += other
-    #    return self
 
 def test_point_construction() -> None:
     point = Point2D(1.0, 42.0)
