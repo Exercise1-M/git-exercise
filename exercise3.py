@@ -24,6 +24,7 @@ class Rectangle:
     def upper_right(self) -> Point2D:
         return self.corner(3)
 
+
     # def contains(self, point: Point2D, tolerance: float = 0.0) -> bool: # Task B
     def contains(self, point: Point2D) -> bool:
         # Task A: remove duplication by defining a function
@@ -34,13 +35,10 @@ class Rectangle:
 
     def _is_idx_on_upper_edge(self, i: int) -> bool:
         return i in [2, 3]
-    
     def _is_idx_on_right_edge(self, i: int) -> bool:
         return i in [1, 3]
-
     def is_in_interval(self, value: float, start: float, length: float) -> bool: # Task A
         return start <= value <= start + length
-
 
 
 def test_rectangle_contains_exact() -> None:
